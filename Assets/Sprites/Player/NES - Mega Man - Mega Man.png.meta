@@ -20,6 +20,30 @@ TextureImporter:
   - first:
       213: -4281205360932804087
     second: Mega Man_Jump
+  - first:
+      213: -1189471701885857120
+    second: Mega Man_Stun0
+  - first:
+      213: -5510698180526333002
+    second: Mega Man_Stun1
+  - first:
+      213: -1096152022825325021
+    second: Mega Man_Shooting_Idle0
+  - first:
+      213: 1465760725573716603
+    second: Mega Man_Shooting_Walk0
+  - first:
+      213: -9027646783001708590
+    second: Mega Man_Shooting_Walk1
+  - first:
+      213: -56015716360501634
+    second: Mega Man_Shooting_Walk2
+  - first:
+      213: -127099875049243102
+    second: Mega Man_Shooting_Jump
+  - first:
+      213: -3980224236017479262
+    second: Mega Man_IdleWalk
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -135,7 +159,7 @@ TextureImporter:
         serializedVersion: 2
         x: 29
         y: 336
-        width: 21
+        width: 20
         height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -230,6 +254,174 @@ TextureImporter:
       bones: []
       spriteID: 90a2a13386a1694c0800000000000000
       internalID: -4281205360932804087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Stun0
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 340
+        width: 26
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a2d6ba0ac52e7fe0800000000000000
+      internalID: -1189471701885857120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Stun1
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 338
+        width: 28
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b32655a3311683b0800000000000000
+      internalID: -5510698180526333002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Shooting_Idle0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 279
+        width: 31
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32eababfa8fa9c0f0800000000000000
+      internalID: -1096152022825325021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Shooting_Walk0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 279
+        width: 29
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7a4a8d2d9d675410800000000000000
+      internalID: 1465760725573716603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Shooting_Walk1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 279
+        width: 26
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d73c75d41b57b280800000000000000
+      internalID: -9027646783001708590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Shooting_Walk2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 279
+        width: 29
+        height: 22
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e764e74b00ef83ff0800000000000000
+      internalID: -56015716360501634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Shooting_Jump
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 281
+        width: 29
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e71b846537c3ef0800000000000000
+      internalID: -127099875049243102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_IdleWalk
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 336
+        width: 20
+        height: 24
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a117cd352763c8c0800000000000000
+      internalID: -3980224236017479262
       vertices: []
       indices: 
       edges: []
