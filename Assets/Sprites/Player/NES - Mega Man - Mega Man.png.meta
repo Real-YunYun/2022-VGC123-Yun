@@ -28,7 +28,7 @@ TextureImporter:
     second: Mega Man_Stun1
   - first:
       213: -1096152022825325021
-    second: Mega Man_Shooting_Idle0
+    second: Mega Man_Shooting_Idle
   - first:
       213: 1465760725573716603
     second: Mega Man_Shooting_Walk0
@@ -301,7 +301,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mega Man_Shooting_Idle0
+      name: Mega Man_Shooting_Idle
       rect:
         serializedVersion: 2
         x: 1
