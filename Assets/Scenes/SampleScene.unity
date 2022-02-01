@@ -3054,6 +3054,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mega Man
       objectReference: {fileID: 0}
+    - target: {fileID: 9138883467376691257, guid: 2df2c4d43165e7a43be570553635898d, type: 3}
+      propertyPath: delayShooting
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 9138883467376691263, guid: 2df2c4d43165e7a43be570553635898d, type: 3}
       propertyPath: sr
       value: 

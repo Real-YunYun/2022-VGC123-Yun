@@ -43,13 +43,11 @@ public class PlayerFire : MonoBehaviour
     {
         if (!sr.flipX)
         {
-            Debug.Log(projectileSpeed);
             Projectile temp = Instantiate(projectilePreFab, spawnPointLeft.position, spawnPointLeft.rotation);
             temp.speed = projectileSpeed * -1;
         }
         else
         {
-            Debug.Log(projectileSpeed);
             Projectile temp = Instantiate(projectilePreFab, spawnPointRight.position, spawnPointRight.rotation);
         }
     }

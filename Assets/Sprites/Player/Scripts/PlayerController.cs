@@ -68,7 +68,8 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 isShooting = true;
-                anim.SetBool("isShooting", Input.GetButtonDown("Fire1"));
+                //anim.SetBool("isShooting", Input.GetButtonDown("Fire1"));
+                anim.SetBool("isShooting", isShooting);
             }
 
             if (hInput > 0 && !pr.flipX || hInput < 0 && pr.flipX)
@@ -82,6 +83,12 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("xVel", Mathf.Abs(hInput));
             anim.SetFloat("yVel", Mathf.Abs(rb.velocity.y));
             anim.SetBool("isGrounded", isGrounded);
+            delayShooting -= 1;
+            if (delayShooting == 0)
+            {
+                isShooting = false;
+                anim.SetBool("isShooting", isShooting);
+            }
         } 
         if (stunCharacter)  
         {
