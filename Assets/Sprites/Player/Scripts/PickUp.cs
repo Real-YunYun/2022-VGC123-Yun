@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+
+    enum CollectableType
+    {
+        POWERUP,
+        SCORE,
+        HEALTH,
+        AMMO
+    }
+
+    [SerializeField] CollectableType curCollectable;
+    public int ScoreValue;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +32,23 @@ public class PickUp : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            PlayerController curPlayerController = collision.gameObject.GetComponent<PlayerController>();
+
+            switch (curCollectable)
+            {
+                case CollectableType.POWERUP:
+                    curPlayerController.StartJumpForceChange();
+                    curPlayerController.score++;
+                    break;
+                case CollectableType.HEALTH:
+                    curPlayerController.lives++;
+                    break;
+                case CollectableType.AMMO:
+                    break;
+                case CollectableType.SCORE:
+                    curPlayerController.score += ScoreValue;
+                    break;
+            }
             Destroy(gameObject);
         }
     }

@@ -7,6 +7,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour    
 {
 
+    bool coroutineRunning = false;
+
     public bool verboose = true;
     public bool isGrounded = false;
     public bool stunCharacter = false;
@@ -16,6 +18,38 @@ public class PlayerController : MonoBehaviour
 
     Rigidbody2D rb;
     SpriteRenderer pr;
+
+    int _score = 0;
+    int _lives = 1;
+    public int maxLives = 3;
+
+    public int score
+    {
+        get { return _score; }
+        set
+        {
+            _score = value;
+        }
+    }
+
+    public int lives
+    {
+        get { return _lives; }
+        set
+        {
+            //Respawn
+            //if (_lives > value)
+
+            _lives = value;
+            if (_lives > maxLives)
+            {
+                _lives = maxLives;
+            }
+
+            // Gameover screen?
+            //if (_lives < 0)
+        }
+    }
 
     [SerializeField] public float speed;
 
@@ -68,8 +102,15 @@ public class PlayerController : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 isShooting = true;
-                //anim.SetBool("isShooting", Input.GetButtonDown("Fire1"));
                 anim.SetBool("isShooting", isShooting);
+                delayShooting = 1000;
+                delayShooting -= 1;
+                //anim.SetBool("isShooting", Input.GetButtonDown("Fire1"));
+            }
+
+            if (delayShooting != 1000)
+            {
+                delayShooting -= 1;
             }
 
             if (hInput > 0 && !pr.flipX || hInput < 0 && pr.flipX)
@@ -83,11 +124,11 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("xVel", Mathf.Abs(hInput));
             anim.SetFloat("yVel", Mathf.Abs(rb.velocity.y));
             anim.SetBool("isGrounded", isGrounded);
-            delayShooting -= 1;
-            if (delayShooting == 0)
+            if (delayShooting <= 0)
             {
                 isShooting = false;
                 anim.SetBool("isShooting", isShooting);
+                delayShooting = 1000;
             }
         } 
         if (stunCharacter)  
@@ -99,6 +140,32 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("stunCharacter", stunCharacter);
             }
         }
+        //Debug.Log(_score);
+    }
+
+    public void StartJumpForceChange()
+    {
+        if (!coroutineRunning)
+        {
+            StartCoroutine("JumpForceChange");
+        }
+        else
+        {
+            StopCoroutine("JumpForceChange");
+            jumpForce /= 2;
+            StartCoroutine("JumpForceChange");
+        }
+    }
+
+    IEnumerator JumpForceChange()
+    {
+        coroutineRunning = true;
+        jumpForce *= 2;
+
+        yield return new WaitForSeconds(5.0f);
+
+        jumpForce /= 2;
+        coroutineRunning = false;
     }
 }
 
