@@ -34,7 +34,11 @@ public class PlayerFire : MonoBehaviour
     {
          if (Input.GetButtonDown("Fire1"))
         {
-            FireProjectile();
+            PlayerController curPlayerController = gameObject.GetComponent<PlayerController>();
+            if (curPlayerController.ammo != 0 && !(curPlayerController.ammo < 0))
+            {
+                FireProjectile();
+            }
         }
       
     }

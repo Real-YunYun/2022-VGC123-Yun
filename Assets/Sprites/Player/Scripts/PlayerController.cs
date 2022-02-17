@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour
     public bool isShooting = false;
     public int delayShooting = 60;
     public int health = 28;
+    public int ammo = 56;
+
     Animator anim;
 
     Rigidbody2D rb;
@@ -66,6 +68,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Collider2D groundCheckCollider;
 
     [SerializeField] Image healthBar;
+    [SerializeField] Image ammoBar;
 
 
     void Start()
@@ -88,19 +91,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         isShooting = false;
-        handleHealthUI();
+        handleUI();
         float hInput = Input.GetAxis("Horizontal");
         Vector2 moveDir = new Vector2(hInput * speed, rb.velocity.y);
         
         if (!stunCharacter)
         {
             isGrounded = groundCheckCollider.IsTouchingLayers(isGroundLayer);
-
-            Debug.Log(rb.IsTouchingLayers(isDeathBoxLayer));
-            if (rb.IsTouchingLayers(isDeathBoxLayer))
-            {
-                health = 0;
-            }
 
             if (isGrounded && Input.GetButtonDown("Jump"))
             {
@@ -114,15 +111,6 @@ public class PlayerController : MonoBehaviour
             { 
                 stunCharacter = true; 
                 anim.SetBool("stunCharacter", stunCharacter);
-            }
-
-            if (Input.GetButtonDown("Fire1"))
-            {
-                isShooting = true;
-                anim.SetBool("isShooting", isShooting);
-                delayShooting = 1000;
-                delayShooting -= 1;
-                //anim.SetBool("isShooting", Input.GetButtonDown("Fire1"));
             }
 
             if (delayShooting != 1000)
@@ -159,23 +147,37 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void handleHealthUI()
+    private void handleUI()
     {
 
+        float ammoTemp = 1f / 56f;
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if (ammo > 56)
+            {
+                ammo = 56;
+            }
+            if (ammo != 0 && ammo > 0)
+            {
+                isShooting = true;
+                anim.SetBool("isShooting", isShooting);
+                delayShooting = 1000;
+                delayShooting -= 1;
+                ammo--;
+            }
+            else ammo = 0;
+        }
+
         //HealthBar has 7 full segments of units of 4, 7 * 4 = 28 health in total
-        float temp = 1f / 28f;
-        healthBar.fillAmount = health * temp;
+        float healthTemp = 1f / 28f;
         if (Input.GetButtonDown("Fire2"))
         {
-            if (health != 0 && health > 0)
-            {
-                health--;
-            }
-            else
-            {
-                health = 0;
-            }
+            if (health != 0 && health > 0) health--;
+            else health = 0;
         }
+        healthBar.fillAmount = health * healthTemp;
+        ammoBar.fillAmount = ammo * ammoTemp;
+
     }
 
     public void StartJumpForceChange()

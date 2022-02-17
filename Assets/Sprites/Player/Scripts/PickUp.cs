@@ -41,9 +41,10 @@ public class PickUp : MonoBehaviour
                     curPlayerController.score++;
                     break;
                 case CollectableType.HEALTH:
-                    curPlayerController.lives++;
+                    curPlayerController.health+=7;
                     break;
                 case CollectableType.AMMO:
+                    curPlayerController.ammo += 7;
                     break;
                 case CollectableType.SCORE:
                     curPlayerController.score += ScoreValue;
