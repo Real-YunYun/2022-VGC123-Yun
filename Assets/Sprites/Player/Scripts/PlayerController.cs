@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
 
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public bool stunCharacter = false;
     public bool isShooting = false;
     public int delayShooting = 60;
+    public int health = 28;
     Animator anim;
 
     Rigidbody2D rb;
@@ -56,8 +58,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float groundCheckRadius;
     [SerializeField] public int jumpForce;
 
+    [SerializeField] LayerMask isDeathBoxLayer;
     [SerializeField] LayerMask isGroundLayer;
+
     [SerializeField] Transform groundCheck;
+
+    [SerializeField] Collider2D groundCheckCollider;
+
+    [SerializeField] Image healthBar;
+
 
     void Start()
     {
@@ -69,22 +78,30 @@ public class PlayerController : MonoBehaviour
         if (jumpForce <= 0) { jumpForce = 300; }
         if (stunCharacter) { stunCharacter = false; }
         if (groundCheckRadius <= 0) { groundCheckRadius = 0.05f; }
-        if (!groundCheck) { groundCheck.transform.GetChild(0); }
-
-
+        if (!groundCheck)
+        {
+            groundCheck.transform.GetChild(0);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         isShooting = false;
+        handleHealthUI();
         float hInput = Input.GetAxis("Horizontal");
         Vector2 moveDir = new Vector2(hInput * speed, rb.velocity.y);
         
         if (!stunCharacter)
         {
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, isGroundLayer);
-                
+            isGrounded = groundCheckCollider.IsTouchingLayers(isGroundLayer);
+
+            Debug.Log(rb.IsTouchingLayers(isDeathBoxLayer));
+            if (rb.IsTouchingLayers(isDeathBoxLayer))
+            {
+                health = 0;
+            }
+
             if (isGrounded && Input.GetButtonDown("Jump"))
             {
                 rb.velocity = Vector2.zero;
@@ -140,7 +157,25 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("stunCharacter", stunCharacter);
             }
         }
-        //Debug.Log(_score);
+    }
+
+    private void handleHealthUI()
+    {
+
+        //HealthBar has 7 full segments of units of 4, 7 * 4 = 28 health in total
+        float temp = 1f / 28f;
+        healthBar.fillAmount = health * temp;
+        if (Input.GetButtonDown("Fire2"))
+        {
+            if (health != 0 && health > 0)
+            {
+                health--;
+            }
+            else
+            {
+                health = 0;
+            }
+        }
     }
 
     public void StartJumpForceChange()
@@ -168,4 +203,5 @@ public class PlayerController : MonoBehaviour
         coroutineRunning = false;
     }
 }
+
 

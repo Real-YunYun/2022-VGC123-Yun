@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - Projectile
+  - Death Box
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - Ground
   - Water
   - UI
-  - 
+  - Death Box
   - 
   - 
   - 
