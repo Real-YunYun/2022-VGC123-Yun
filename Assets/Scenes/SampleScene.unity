@@ -996,7 +996,7 @@ Transform:
   - {fileID: 1348595666}
   - {fileID: 1921132027}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &519420028
 GameObject:
@@ -1095,10 +1095,9 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.7, y: 0, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1118256826}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &551027190
 PrefabInstance:
@@ -1109,7 +1108,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5434694684707523665, guid: 17513f1ee3238874a978e09056acaeab, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5434694684707523665, guid: 17513f1ee3238874a978e09056acaeab, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1223,6 +1222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 574723576}
+  - component: {fileID: 574723577}
   m_Layer: 0
   m_Name: Flame Spawn Point3
   m_TagString: Enemy
@@ -1244,6 +1244,18 @@ Transform:
   m_Father: {fileID: 792221423}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &574723577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 574723575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6770eccd21b550147b314865c15d898f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &663009956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1659,7 +1671,7 @@ Transform:
   - {fileID: 574723576}
   - {fileID: 1694474525}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &792221424
 MonoBehaviour:
@@ -1678,8 +1690,8 @@ MonoBehaviour:
   spawnPoint2: {fileID: 1653266567}
   spawnPoint3: {fileID: 574723576}
   spawnPoint4: {fileID: 1694474525}
-  idleTime: 1000
-  attack: 1
+  idleTime: 2000
+  attack: 0
   currentTime: 0
 --- !u!1 &816264933
 GameObject:
@@ -1847,7 +1859,7 @@ Transform:
   - {fileID: 1544252731}
   - {fileID: 755058787}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1021329985
 GameObject:
@@ -2052,7 +2064,7 @@ RectTransform:
   - {fileID: 1327431087}
   - {fileID: 273750402}
   - {fileID: 1462432548}
-  m_Father: {fileID: 519420032}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2235,7 +2247,7 @@ Transform:
   - {fileID: 2131212304}
   - {fileID: 509779370}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1178482441
 GameObject:
@@ -2328,7 +2340,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2513,7 +2525,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2709,7 +2721,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2766,7 +2778,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3155,7 +3167,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4983902011108543893, guid: e86fb5254cc004e4db93c1fe3c4f5eeb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3212,6 +3224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1653266567}
+  - component: {fileID: 1653266568}
   m_Layer: 0
   m_Name: Flame Spawn Point2
   m_TagString: Enemy
@@ -3233,6 +3246,18 @@ Transform:
   m_Father: {fileID: 792221423}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &1653266568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653266566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6770eccd21b550147b314865c15d898f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1670686625
 GameObject:
   m_ObjectHideFlags: 0
@@ -3242,6 +3267,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1670686626}
+  - component: {fileID: 1670686627}
   m_Layer: 0
   m_Name: Flame Spawn Point1
   m_TagString: Enemy
@@ -3263,6 +3289,18 @@ Transform:
   m_Father: {fileID: 792221423}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1670686627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670686625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6770eccd21b550147b314865c15d898f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1689341475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3299,7 +3337,7 @@ Transform:
   - {fileID: 571921794}
   - {fileID: 78778310}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1694474524
 GameObject:
@@ -3310,6 +3348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1694474525}
+  - component: {fileID: 1694474526}
   m_Layer: 0
   m_Name: Flame Spawn Point4
   m_TagString: Enemy
@@ -3331,6 +3370,18 @@ Transform:
   m_Father: {fileID: 792221423}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &1694474526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694474524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6770eccd21b550147b314865c15d898f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1722892077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3362,7 +3413,7 @@ Transform:
   - {fileID: 1254773400}
   - {fileID: 1967012357}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725328745
 GameObject:
@@ -4005,7 +4056,7 @@ Transform:
   - {fileID: 1980339354}
   - {fileID: 2124587644}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2055002242
 GameObject:
@@ -4319,7 +4370,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5147588746600783489, guid: 2eb63f2c6fcef1b44b617041c89ef67b, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5147588746600783489, guid: 2eb63f2c6fcef1b44b617041c89ef67b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4376,7 +4427,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9138883467376691236, guid: 2df2c4d43165e7a43be570553635898d, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 9138883467376691236, guid: 2df2c4d43165e7a43be570553635898d, type: 3}
       propertyPath: m_LocalPosition.x

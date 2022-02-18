@@ -9,6 +9,7 @@ public class Quadra : MonoBehaviour
     Animator anim;
 
     [SerializeField] GameObject flame;
+
     [SerializeField] Transform spawnPoint1;
     [SerializeField] Transform spawnPoint2;
     [SerializeField] Transform spawnPoint3;
@@ -21,7 +22,7 @@ public class Quadra : MonoBehaviour
     public int currentTime = 1000;
 
     private void Start()
-    {
+    {        
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
     }
@@ -45,21 +46,17 @@ public class Quadra : MonoBehaviour
         anim.SetBool("Attack", attack);
     }
 
-    public void StartFlame()
+    public void SpawnFlames()
     {
-        GameObject temp1Flame = flame;
-        GameObject temp2Flame = flame;
-        GameObject temp3Flame = flame;
-        GameObject temp4Flame = flame;
-
-        Instantiate(temp1Flame, spawnPoint1.position, spawnPoint1.rotation);
-        Instantiate(temp2Flame, spawnPoint2.position, spawnPoint2.rotation);
-        Instantiate(temp3Flame, spawnPoint3.position, spawnPoint3.rotation);
-        Instantiate(temp4Flame, spawnPoint4.position, spawnPoint4.rotation);
-
-        Destroy(temp1Flame.gameObject, 0.5f);
-        Destroy(temp2Flame.gameObject, 0.5f);
-        Destroy(temp3Flame.gameObject, 0.5f);
-        Destroy(temp4Flame.gameObject, 0.5f);
+        GameObject temp = flame;
+        if (attack)
+        {
+            temp = Instantiate(flame, spawnPoint1.position, spawnPoint1.rotation);
+            Animator flameAnim = flame.GetComponent<Animator>();
+            flameAnim.SetBool("Loop", true);
+        } else if (!attack)
+        {
+            Destroy(temp);
+        }
     }
 }
