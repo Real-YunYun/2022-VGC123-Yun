@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] Image healthBar;
     [SerializeField] Image ammoBar;
+    [SerializeField] Text scoreText;
 
 
     void Start()
@@ -98,6 +99,11 @@ public class PlayerController : MonoBehaviour
         if (!stunCharacter)
         {
             isGrounded = groundCheckCollider.IsTouchingLayers(isGroundLayer);
+
+            if (groundCheckCollider.IsTouchingLayers(isDeathBoxLayer))
+            {
+                health = 0;
+            }
 
             if (isGrounded && Input.GetButtonDown("Jump"))
             {
@@ -177,6 +183,7 @@ public class PlayerController : MonoBehaviour
         }
         healthBar.fillAmount = health * healthTemp;
         ammoBar.fillAmount = ammo * ammoTemp;
+        scoreText.text = score.ToString();
 
     }
 

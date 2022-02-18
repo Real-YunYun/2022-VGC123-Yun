@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8945684705104749548}
   m_Layer: 0
   m_Name: Med Ammo Pickup
-  m_TagString: Untagged
+  m_TagString: Pickup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curCollectable: 3
+  Value: 14
   ScoreValue: 0
 --- !u!212 &8945684705104749550
 SpriteRenderer:
@@ -138,4 +139,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curCollectable: 3
+  Value: 0
   ScoreValue: 0

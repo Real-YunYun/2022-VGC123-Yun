@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curCollectable: 1
+  Value: 0
   ScoreValue: 50
 --- !u!212 &5434694684707523667
 SpriteRenderer:

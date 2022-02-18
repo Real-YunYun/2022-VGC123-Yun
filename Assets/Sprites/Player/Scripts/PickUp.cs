@@ -14,6 +14,7 @@ public class PickUp : MonoBehaviour
     }
 
     [SerializeField] CollectableType curCollectable;
+    [SerializeField] int Value;
     public int ScoreValue;
 
     // Start is called before the first frame update
@@ -38,19 +39,18 @@ public class PickUp : MonoBehaviour
             {
                 case CollectableType.POWERUP:
                     curPlayerController.StartJumpForceChange();
-                    curPlayerController.score++;
                     break;
                 case CollectableType.HEALTH:
-                    curPlayerController.health+=7;
+                    curPlayerController.health += Value;
                     break;
                 case CollectableType.AMMO:
-                    curPlayerController.ammo += 7;
+                    curPlayerController.ammo += Value;
                     break;
                 case CollectableType.SCORE:
                     curPlayerController.score += ScoreValue;
                     break;
             }
-            Destroy(gameObject);
+            Destroy(this.gameObject);
         }
     }
 }

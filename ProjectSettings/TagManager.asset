@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Projectile
   - Death Box
+  - Enemy
+  - Pepe Stop Wall
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Water
   - UI
   - Death Box
-  - 
+  - Pepe Stop Wall
   - 
   - 
   - 

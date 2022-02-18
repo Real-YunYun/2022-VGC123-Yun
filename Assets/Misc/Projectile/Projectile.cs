@@ -16,8 +16,7 @@ public class Projectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (lifetime <= 0) lifetime = 1.0f;
         rb.velocity = new Vector2(speed, 0);
-        rb.velocity = new Vector2(speed, 0);
         Destroy(gameObject, lifetime);
-
     }
+   
 }
