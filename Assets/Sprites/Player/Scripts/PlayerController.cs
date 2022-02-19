@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     public bool isGrounded = false;
     public bool stunCharacter = false;
     public bool isShooting = false;
-    public int delayShooting = 60;
     public int health = 28;
     public int ammo = 56;
 
@@ -131,13 +130,8 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("xVel", Mathf.Abs(hInput));
             anim.SetFloat("yVel", Mathf.Abs(rb.velocity.y));
             anim.SetBool("isGrounded", isGrounded);
-            if (delayShooting <= 0)
-            {
-                isShooting = false;
-                anim.SetBool("isShooting", isShooting);
-                delayShooting = 1000;
-            }
         } 
+
         if (stunCharacter)  
         {
             if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
@@ -163,8 +157,6 @@ public class PlayerController : MonoBehaviour
             {
                 isShooting = true;
                 anim.SetBool("isShooting", isShooting);
-                delayShooting = 1000;
-                delayShooting -= 1;
                 ammo--;
             }
             else ammo = 0;
