@@ -32,6 +32,9 @@ TextureImporter:
   - first:
       213: -1680683042119154838
     second: Mega Man-Item_Score50
+  - first:
+      213: -1478605804891334425
+    second: Mega Man Lives
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -250,7 +253,7 @@ TextureImporter:
       name: Mega Man-Item_SuperJump
       rect:
         serializedVersion: 2
-        x: 103
+        x: 137
         y: 101
         width: 16
         height: 16
@@ -276,7 +279,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -297,7 +300,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -318,7 +321,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -326,6 +329,27 @@ TextureImporter:
       bones: []
       spriteID: a6307768da30da8e0800000000000000
       internalID: -1680683042119154838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Lives
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 101
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e81f9cbadfea7be0800000000000000
+      internalID: -1478605804891334425
       vertices: []
       indices: 
       edges: []

@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerFire : MonoBehaviour
 {
-    public bool verbose = false;
-
     SpriteRenderer sr;
     Animator anim;
 
@@ -22,12 +20,6 @@ public class PlayerFire : MonoBehaviour
         anim = GetComponent<Animator>();
 
         if (projectileSpeed <- 0) projectileSpeed = 7.0f;
-
-        if (!spawnPointLeft || !spawnPointRight || !projectilePreFab)
-        {
-            if (verbose) Debug.Log("Inspector Values Not Set...");
-        }
-
     }
 
     private void Update()
@@ -37,6 +29,7 @@ public class PlayerFire : MonoBehaviour
             PlayerController curPlayerController = gameObject.GetComponent<PlayerController>();
             if (curPlayerController.ammo != 0 && !(curPlayerController.ammo < 0))
             {
+                curPlayerController.StartShootingDelay();
                 FireProjectile();
             }
         }

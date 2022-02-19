@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
-
     enum CollectableType
     {
         POWERUP,
@@ -16,18 +15,6 @@ public class PickUp : MonoBehaviour
     [SerializeField] CollectableType curCollectable;
     [SerializeField] int Value;
     public int ScoreValue;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

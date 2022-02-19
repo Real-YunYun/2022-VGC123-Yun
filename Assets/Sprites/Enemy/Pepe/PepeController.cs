@@ -48,6 +48,7 @@ public class PepeController : MonoBehaviour
         {
             PlayerController curPlayerController = collision.gameObject.GetComponent<PlayerController>();
             curPlayerController.health-=7;
+            curPlayerController.stunCharacter = true;
         }
         if (collision.gameObject.tag == "Projectile")
         {

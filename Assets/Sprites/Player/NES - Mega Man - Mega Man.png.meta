@@ -50,6 +50,18 @@ TextureImporter:
   - first:
       213: -908345319746691865
     second: Mega Man_Projectile_1
+  - first:
+      213: -8597838965507327593
+    second: Mega Man_Shooting_Climb
+  - first:
+      213: -4787954170442957707
+    second: Mega Man_Climbing0
+  - first:
+      213: 361187766707842569
+    second: Mega Man_Climbing1
+  - first:
+      213: -8141436285243160392
+    second: Mega Man_Mantle
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -163,9 +175,9 @@ TextureImporter:
       name: Mega Man_Idle1
       rect:
         serializedVersion: 2
-        x: 29
+        x: 28
         y: 336
-        width: 20
+        width: 21
         height: 24
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -441,7 +453,7 @@ TextureImporter:
         width: 12
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,7 +474,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -470,6 +482,90 @@ TextureImporter:
       bones: []
       spriteID: 7ec1c1b8eb8e463f0800000000000000
       internalID: -908345319746691865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Shooting_Climb
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 282
+        width: 24
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7997ce0a3075ea880800000000000000
+      internalID: -8597838965507327593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Climbing0
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 339
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cb5e5bc05cd8db0800000000000000
+      internalID: -4787954170442957707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Climbing1
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 339
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e66d33c52330500800000000000000
+      internalID: 361187766707842569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man_Mantle
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 338
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b80b9075dec30f80800000000000000
+      internalID: -8141436285243160392
       vertices: []
       indices: 
       edges: []

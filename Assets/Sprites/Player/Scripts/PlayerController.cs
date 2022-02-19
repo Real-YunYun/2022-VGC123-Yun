@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
 
     bool coroutineRunning = false;
+    bool shootingCoroutineRunning = false;
 
     public bool verboose = true;
     public bool isGrounded = false;
@@ -119,11 +120,6 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("stunCharacter", stunCharacter);
             }
 
-            if (delayShooting != 1000)
-            {
-                delayShooting -= 1;
-            }
-
             if (hInput > 0 && !pr.flipX || hInput < 0 && pr.flipX)
             {
                 pr.flipX = !pr.flipX;
@@ -174,7 +170,6 @@ public class PlayerController : MonoBehaviour
             else ammo = 0;
         }
 
-        //HealthBar has 7 full segments of units of 4, 7 * 4 = 28 health in total
         float healthTemp = 1f / 28f;
         if (Input.GetButtonDown("Fire2"))
         {
@@ -185,6 +180,31 @@ public class PlayerController : MonoBehaviour
         ammoBar.fillAmount = ammo * ammoTemp;
         scoreText.text = score.ToString();
 
+    }
+
+    public void StartShootingDelay()
+    {
+        if (!shootingCoroutineRunning)
+        {
+            StartCoroutine("ShootingDelay");
+        }
+        else
+        {
+            StopCoroutine("ShootingDelay");
+        }
+    }
+
+    IEnumerator ShootingDelay()
+    {
+        shootingCoroutineRunning = true;
+
+        isShooting = true;
+        anim.SetBool("isShooting", isShooting);
+        yield return new WaitForSeconds(2.0f);
+        isShooting = false;
+        anim.SetBool("isShooting", isShooting);
+
+        shootingCoroutineRunning = false;
     }
 
     public void StartJumpForceChange()
