@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-
-public class Projectile : MonoBehaviour
+public class ManbuProjectile : MonoBehaviour
 {
-
     public float speed;
+    public Vector3 PlayerPos;
     public float lifetime;
 
     Rigidbody2D rb;
@@ -17,8 +15,9 @@ public class Projectile : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         if (lifetime <= 0) lifetime = 1.0f;
-        rb.velocity = new Vector2(speed, 0);
+        PlayerPos.y += 0.5f;
+        Vector3 tempVector = PlayerPos - gameObject.transform.position;
+        rb.velocity = speed * tempVector.normalized;
         Destroy(gameObject, lifetime);
     }
-   
 }

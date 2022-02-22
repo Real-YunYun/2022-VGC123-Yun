@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Collider2D))]
+
 public class PepeController : MonoBehaviour
 {
     Rigidbody2D rb;
@@ -48,9 +50,9 @@ public class PepeController : MonoBehaviour
         {
             PlayerController curPlayerController = collision.gameObject.GetComponent<PlayerController>();
             curPlayerController.health-=7;
-            curPlayerController.stunCharacter = true;
+            curPlayerController.isHurt = true;
         }
-        if (collision.gameObject.tag == "Projectile")
+        if (collision.gameObject.tag == "PlayerProjectile")
         {
             Destroy(this.gameObject);
         }

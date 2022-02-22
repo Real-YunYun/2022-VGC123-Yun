@@ -10,11 +10,14 @@ public class PlayerController : MonoBehaviour
 
     bool coroutineRunning = false;
     bool shootingCoroutineRunning = false;
+    bool hurtCoroutineRunning = false;
 
     public bool verboose = true;
-    public bool isGrounded = false;
     public bool stunCharacter = false;
+    public bool isGrounded = false;
     public bool isShooting = false;
+    public bool isHurt = false;
+    public bool isClimbing = false;
     public int health = 28;
     public int ammo = 56;
 
@@ -63,12 +66,19 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask isDeathBoxLayer;
     [SerializeField] LayerMask isGroundLayer;
 
+    [SerializeField] LayerMask isLadderLayer;
+    [SerializeField] LayerMask isMantleLayer;
+
     [SerializeField] Transform groundCheck;
 
     [SerializeField] Collider2D groundCheckCollider;
+    [SerializeField] Collider2D ladderCheckCollider;
 
     [SerializeField] Image healthBar;
     [SerializeField] Image ammoBar;
+    [SerializeField] Image liveSymbol1;
+    [SerializeField] Image liveSymbol2;
+    [SerializeField] Image liveSymbol3;
     [SerializeField] Text scoreText;
 
 
@@ -79,9 +89,8 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         
         if (speed <= 0) { speed = 5.0f; }
-        if (jumpForce <= 0) { jumpForce = 300; }
+        if (jumpForce <= 0) { jumpForce = 375; }
         if (stunCharacter) { stunCharacter = false; }
-        if (groundCheckRadius <= 0) { groundCheckRadius = 0.05f; }
         if (!groundCheck)
         {
             groundCheck.transform.GetChild(0);
@@ -95,20 +104,45 @@ public class PlayerController : MonoBehaviour
         handleUI();
         float hInput = Input.GetAxis("Horizontal");
         Vector2 moveDir = new Vector2(hInput * speed, rb.velocity.y);
+
+        if (health <= 0)
+        {
+            anim.SetBool("Death", true);
+            lives--;
+            health = 28;
+        }
+        else
+        {
+            anim.SetBool("Death", false);
+        }
         
-        if (!stunCharacter)
+        if (!stunCharacter || !isHurt)
         {
             isGrounded = groundCheckCollider.IsTouchingLayers(isGroundLayer);
 
-            if (groundCheckCollider.IsTouchingLayers(isDeathBoxLayer))
-            {
-                health = 0;
-            }
+            if (groundCheckCollider.IsTouchingLayers(isDeathBoxLayer)) health = 0;
 
             if (isGrounded && Input.GetButtonDown("Jump"))
             {
                 rb.velocity = Vector2.zero;
                 rb.AddForce(Vector2.up * jumpForce);
+            }
+            
+
+            if (!(rb.IsTouchingLayers(isLadderLayer))) anim.enabled = true;
+
+            anim.SetBool("Climbing", ladderCheckCollider.IsTouchingLayers(isLadderLayer));
+            anim.SetBool("Mantle", ladderCheckCollider.IsTouchingLayers(isMantleLayer));
+            if (ladderCheckCollider.IsTouchingLayers(isLadderLayer) && Input.GetKey(KeyCode.W))
+            {
+                anim.enabled = true;
+                moveDir.y = 3;
+            }
+            if (ladderCheckCollider.IsTouchingLayers(isLadderLayer) && !(Input.GetKey(KeyCode.W)))
+            {
+                //anim.Play("Climbing");
+                moveDir.y = 0.201f;
+                anim.enabled = false;
             }
             
             rb.velocity = moveDir;
@@ -130,16 +164,11 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("xVel", Mathf.Abs(hInput));
             anim.SetFloat("yVel", Mathf.Abs(rb.velocity.y));
             anim.SetBool("isGrounded", isGrounded);
-        } 
-
-        if (stunCharacter)  
+        }  
+        
+        if (isHurt)
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !anim.IsInTransition(0))
-            {
-                stunCharacter = false;
-                anim.SetBool("isShooting", false);
-                anim.SetBool("stunCharacter", stunCharacter);
-            }
+            StartHurtDelay();
         }
     }
 
@@ -158,6 +187,7 @@ public class PlayerController : MonoBehaviour
                 isShooting = true;
                 anim.SetBool("isShooting", isShooting);
                 ammo--;
+                StartShootingDelay();
             }
             else ammo = 0;
         }
@@ -166,12 +196,58 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire2"))
         {
             if (health != 0 && health > 0) health--;
-            else health = 0;
+            else
+            {
+                health = 0;
+                lives--;
+            }
         }
+
+        if (lives > 0)
+        {
+            if (lives == 3) liveSymbol3.fillAmount = 1;
+
+            if (lives >= 2) liveSymbol2.fillAmount = 1;
+
+            if (lives >= 1) liveSymbol1.fillAmount = 1;
+        }
+
         healthBar.fillAmount = health * healthTemp;
         ammoBar.fillAmount = ammo * ammoTemp;
         scoreText.text = score.ToString();
 
+    }
+
+    public void StartHurtDelay()
+    {
+        if (!shootingCoroutineRunning)
+        {
+            StartCoroutine("HurtDelay");
+        }
+        else
+        {
+            StopCoroutine("HurtDelay");
+        }
+    }
+
+    IEnumerator HurtDelay()
+    {
+        hurtCoroutineRunning = true;
+
+        isHurt = true;
+        anim.SetBool("Hurt", isHurt);
+        yield return new WaitForSeconds(1.5f);
+        isHurt = false;
+        anim.SetBool("Hurt", isHurt);
+
+        hurtCoroutineRunning = false;
+    }
+
+    public void unStunPlayer()
+    {
+        stunCharacter = false;
+        anim.SetBool("stunCharacter", stunCharacter);
+        anim.SetBool("isShooting", false);
     }
 
     public void StartShootingDelay()

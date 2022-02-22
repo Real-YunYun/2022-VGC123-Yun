@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer), typeof(Animator))]
+
 public class PlayerFire : MonoBehaviour
 {
     SpriteRenderer sr;
@@ -29,7 +31,6 @@ public class PlayerFire : MonoBehaviour
             PlayerController curPlayerController = gameObject.GetComponent<PlayerController>();
             if (curPlayerController.ammo != 0 && !(curPlayerController.ammo < 0))
             {
-                curPlayerController.StartShootingDelay();
                 FireProjectile();
             }
         }

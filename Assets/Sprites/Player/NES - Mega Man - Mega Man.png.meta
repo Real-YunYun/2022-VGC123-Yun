@@ -52,7 +52,7 @@ TextureImporter:
     second: Mega Man_Projectile_1
   - first:
       213: -8597838965507327593
-    second: Mega Man_Shooting_Climb
+    second: Mega Man Shooting_Climb
   - first:
       213: -4787954170442957707
     second: Mega Man_Climbing0
@@ -62,6 +62,18 @@ TextureImporter:
   - first:
       213: -8141436285243160392
     second: Mega Man_Mantle
+  - first:
+      213: 3139836659196253364
+    second: Mega Man Death0
+  - first:
+      213: -5600946241531033910
+    second: Mega Man Death1
+  - first:
+      213: -5236510704488657644
+    second: Mega Man Death2
+  - first:
+      213: -7578464265096671078
+    second: Mega Man Death3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -487,15 +499,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Mega Man_Shooting_Climb
+      name: Mega Man Shooting_Climb
       rect:
         serializedVersion: 2
         x: 178
         y: 282
         width: 24
         height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -515,8 +527,8 @@ TextureImporter:
         y: 339
         width: 16
         height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -536,8 +548,8 @@ TextureImporter:
         y: 339
         width: 16
         height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -557,8 +569,8 @@ TextureImporter:
         y: 338
         width: 16
         height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,6 +578,90 @@ TextureImporter:
       bones: []
       spriteID: 8b80b9075dec30f80800000000000000
       internalID: -8141436285243160392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Death0
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 246
+        width: 15
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b454245ec0f29b20800000000000000
+      internalID: 3139836659196253364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Death1
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 246
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6cb7381117542b0800000000000000
+      internalID: -5600946241531033910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Death2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 246
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41d4c6c224d2457b0800000000000000
+      internalID: -5236510704488657644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Death3
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 246
+        width: 16
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90dbef37e2e3d690800000000000000
+      internalID: -7578464265096671078
       vertices: []
       indices: 
       edges: []

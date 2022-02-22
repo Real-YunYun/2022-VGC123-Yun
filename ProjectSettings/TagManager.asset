@@ -10,6 +10,9 @@ TagManager:
   - Enemy
   - Pepe Stop Wall
   - Pickup
+  - Ladder
+  - Mantle
+  - PlayerProjectile
   layers:
   - Default
   - TransparentFX
@@ -19,9 +22,9 @@ TagManager:
   - UI
   - Death Box
   - Pepe Stop Wall
-  - 
-  - 
-  - 
+  - Ladder
+  - Mantle
+  - Player
   - 
   - 
   - 
