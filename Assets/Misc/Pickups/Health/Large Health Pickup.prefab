@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185287118877549650}
-  - component: {fileID: 1185287118877549653}
   - component: {fileID: 1185287118877549651}
   - component: {fileID: 1185287118877549652}
+  - component: {fileID: 1185287118877549653}
   m_Layer: 0
   m_Name: Large Health Pickup
   m_TagString: Pickup
@@ -27,27 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1185287118877549654}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5827638, y: 0.16109267, z: -1.0376357}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1185287118877549653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1185287118877549654}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb173fb5c0048544da244df8d9dbb27b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curCollectable: 2
-  Value: 28
-  ScoreValue: 0
 --- !u!61 &1185287118877549651
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +110,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1185287118877549653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185287118877549654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb173fb5c0048544da244df8d9dbb27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curCollectable: 2
+  Value: 28
+  ScoreValue: 0

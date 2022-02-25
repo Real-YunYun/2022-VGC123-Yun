@@ -20,4 +20,15 @@ public class ManbuProjectile : MonoBehaviour
         rb.velocity = speed * tempVector.normalized;
         Destroy(gameObject, lifetime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        PlayerController curPlayerController = collision.gameObject.GetComponent<PlayerController>();
+        if (collision.gameObject.tag == "Player" && !(curPlayerController == null))
+        {
+            curPlayerController.health -= 7;
+            curPlayerController.isHurt = true;
+            Destroy(this.gameObject);
+        }
+    }
 }

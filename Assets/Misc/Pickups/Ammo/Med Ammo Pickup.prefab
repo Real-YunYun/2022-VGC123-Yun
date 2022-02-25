@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8945684705104749536}
-  - component: {fileID: 8945684705104749537}
   - component: {fileID: 8945684705104749550}
   - component: {fileID: 8945684705104749551}
-  - component: {fileID: 8945684705104749548}
+  - component: {fileID: 8945684705104749537}
   m_Layer: 0
   m_Name: Med Ammo Pickup
   m_TagString: Pickup
@@ -28,27 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8945684705104749549}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.03, y: 0.35644424, z: -11.491709}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8945684705104749537
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8945684705104749549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb173fb5c0048544da244df8d9dbb27b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curCollectable: 3
-  Value: 14
-  ScoreValue: 0
 --- !u!212 &8945684705104749550
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.4}
   m_EdgeRadius: 0
---- !u!114 &8945684705104749548
+--- !u!114 &8945684705104749537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,5 +123,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   curCollectable: 3
-  Value: 0
+  Value: 14
   ScoreValue: 0

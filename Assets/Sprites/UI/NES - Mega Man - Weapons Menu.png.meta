@@ -1,0 +1,996 @@
+fileFormatVersion: 2
+guid: 9af3d888f39e79b49a0419cf2848d52f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8176795636694730102
+    second: Mega Man Weapons Menu
+  - first:
+      213: 5861153816104285934
+    second: Mega Man Weapons Menu Appearing0
+  - first:
+      213: 1291808041345957703
+    second: Mega Man Weapons Menu Appearing1
+  - first:
+      213: -8404056684858708185
+    second: Mega Man Weapons Menu Appearing2
+  - first:
+      213: -5178975701848677932
+    second: Mega Man Weapons Menu Appearing3
+  - first:
+      213: 9075099938766023313
+    second: Mega Man Weapons Menu Appearing4
+  - first:
+      213: -3082858591614936016
+    second: Mega Man Weapons Menu Appearing5
+  - first:
+      213: -5865307408442477980
+    second: Mega Man Weapons Menu Appearing6
+  - first:
+      213: -4698947193978319216
+    second: Mega Man Weapons Menu Appearing7
+  - first:
+      213: 1998568722121912667
+    second: Mega Man Weapons Menu Appearing8
+  - first:
+      213: -8597497885274360389
+    second: Mega Man Weapons Menu Appearing9
+  - first:
+      213: 1912417067631103961
+    second: Mega Man Weapons Menu Appearing10
+  - first:
+      213: 660545694228246860
+    second: Mega Man Weapons Menu Appearing11
+  - first:
+      213: -6415689709847797861
+    second: Mega Man Weapons Menu Appearing12
+  - first:
+      213: 8422107046382537829
+    second: Mega Man Weapons Menu Appearing13
+  - first:
+      213: 606953976687102173
+    second: Mega Man Weapons Menu Appearing14
+  - first:
+      213: 672365072729291223
+    second: Mega Man Weapons Menu Bar
+  - first:
+      213: 554211052177161294
+    second: Mega Man Weapons Menu Num3
+  - first:
+      213: -3634237445264027000
+    second: Mega Man Weapons Menu Num2
+  - first:
+      213: 7520707970293535041
+    second: Mega Man Weapons Menu Num1
+  - first:
+      213: -6670679105957804876
+    second: Mega Man Weapons Menu Disappearing0
+  - first:
+      213: -6886896088725842536
+    second: Mega Man Weapons Menu Disappearing1
+  - first:
+      213: -8227563538215881423
+    second: Mega Man Weapons Menu Disappearing2
+  - first:
+      213: 1915338379083142970
+    second: Mega Man Weapons Menu Disappearing3
+  - first:
+      213: -9199061358973180191
+    second: Mega Man Weapons Menu Disappearing4
+  - first:
+      213: -4152221570951910728
+    second: Mega Man Weapons Menu Disappearing5
+  - first:
+      213: 2082919774672823778
+    second: Mega Man Weapons Menu Disappearing6
+  - first:
+      213: -9207761614899292180
+    second: Mega Man Weapons Menu Disappearing7
+  - first:
+      213: 9203266338928498532
+    second: Mega Man Weapons Menu Disappearing8
+  - first:
+      213: 2114053829709652284
+    second: Mega Man Weapons Menu Disappearing9
+  - first:
+      213: -2992020791087067788
+    second: Mega Man Weapons Menu Disappearing10
+  - first:
+      213: 610591780166753270
+    second: Mega Man Weapons Menu Disappearing11
+  - first:
+      213: 730435470283374600
+    second: Mega Man Weapons Menu Disappearing12
+  - first:
+      213: 5470997479472613469
+    second: Mega Man Weapons Menu Disappearing13
+  - first:
+      213: -6725124726355761405
+    second: Mega Man Weapons Menu Disappearing14
+  - first:
+      213: -9170068521163783242
+    second: Mega Man Weapons Menu Num0
+  - first:
+      213: -151613012823031377
+    second: Mega Man Weapons Menu NoDisplay
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8ab8d1e0bf268e80800000000000000
+      internalID: -8176795636694730102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee632de8750075150800000000000000
+      internalID: 5861153816104285934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f3b6eb19c6de110800000000000000
+      internalID: 1291808041345957703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72fefb2c8face5b80800000000000000
+      internalID: -8404056684858708185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing3
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d12eeed9059028b0800000000000000
+      internalID: -5178975701848677932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19a6157ff4b31fd70800000000000000
+      internalID: 9075099938766023313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing5
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cd702d17c7735d0800000000000000
+      internalID: -3082858591614936016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing6
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 462b15ddcfd3a9ea0800000000000000
+      internalID: -5865307408442477980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing7
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09e8a945c6cf9ceb0800000000000000
+      internalID: -4698947193978319216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing8
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b517845f9a75cbb10800000000000000
+      internalID: 1998568722121912667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing9
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5bc0f893d8fa880800000000000000
+      internalID: -8597497885274360389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing10
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfcb8ac0354a8a10800000000000000
+      internalID: 1912417067631103961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing11
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4173662fcaba2900800000000000000
+      internalID: 660545694228246860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing12
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f946f5334e6f6a0800000000000000
+      internalID: -6415689709847797861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing13
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56c02f78cb551e470800000000000000
+      internalID: 8422107046382537829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Appearing14
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 176
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8027f0d655c6800800000000000000
+      internalID: 606953976687102173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Bar
+      rect:
+        serializedVersion: 2
+        x: 1606
+        y: 301
+        width: 56
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9b867a878b45900800000000000000
+      internalID: 672365072729291223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Num3
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 310
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c7d9ff304f0b700800000000000000
+      internalID: 554211052177161294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Num2
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 310
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8825d9d6c48909dc0800000000000000
+      internalID: -3634237445264027000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Num1
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 310
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1419bc47d0cee5860800000000000000
+      internalID: 7520707970293535041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4c3c622bcfc63a0800000000000000
+      internalID: -6670679105957804876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8951872ee74dc60a0800000000000000
+      internalID: -6886896088725842536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing2
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135bfa1bd82d1dd80800000000000000
+      internalID: -8227563538215881423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing3
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a375ced9b16a49a10800000000000000
+      internalID: 1915338379083142970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6a167ce6e565080800000000000000
+      internalID: -9199061358973180191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing5
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ba62ba0b785066c0800000000000000
+      internalID: -4152221570951910728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing6
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5a201df7408ec10800000000000000
+      internalID: 2082919774672823778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing7
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce753779895773080800000000000000
+      internalID: -9207761614899292180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing8
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467942969f198bf70800000000000000
+      internalID: 9203266338928498532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing9
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c31e5e3e1c0a65d10800000000000000
+      internalID: 2114053829709652284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing10
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d0ca261f43a76d0800000000000000
+      internalID: -2992020791087067788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing11
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbdc9f2df1497800800000000000000
+      internalID: 610591780166753270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing12
+      rect:
+        serializedVersion: 2
+        x: 1165
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8000691b037032a00800000000000000
+      internalID: 730435470283374600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing13
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d58c5039833eceb40800000000000000
+      internalID: 5470997479472613469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Disappearing14
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1
+        width: 96
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3076e5f41be8ba2a0800000000000000
+      internalID: -6725124726355761405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu Num0
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 310
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b38a0ed34f5db080800000000000000
+      internalID: -9170068521163783242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Weapons Menu NoDisplay
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 176
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa14b53a4cc55edf0800000000000000
+      internalID: -151613012823031377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

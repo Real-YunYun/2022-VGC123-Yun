@@ -9,10 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8962437494852718987}
-  - component: {fileID: 8962437494852718986}
   - component: {fileID: 8962437494852718980}
-  - component: {fileID: 8962437494852718983}
   - component: {fileID: -176550029598294931}
+  - component: {fileID: 8962437494852718986}
   m_Layer: 0
   m_Name: Super Jump Pickup
   m_TagString: Pickup
@@ -34,20 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8962437494852718986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8962437494852718982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb173fb5c0048544da244df8d9dbb27b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curCollectable: 0
-  ScoreValue: 0
 --- !u!61 &8962437494852718980
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74,20 +59,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
---- !u!114 &8962437494852718983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8962437494852718982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb173fb5c0048544da244df8d9dbb27b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curCollectable: 0
-  ScoreValue: 0
 --- !u!212 &-176550029598294931
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -139,3 +110,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8962437494852718986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8962437494852718982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb173fb5c0048544da244df8d9dbb27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curCollectable: 0
+  Value: 25
+  ScoreValue: 0

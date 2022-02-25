@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: 7998021113172829171
     second: Bomb Man Stage_5
+  - first:
+      213: -7740726769308286266
+    second: Bomb Man Stage_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -227,6 +230,27 @@ TextureImporter:
       bones: []
       spriteID: 3f3adbcb3ddaefe60800000000000000
       internalID: 7998021113172829171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomb Man Stage_6
+      rect:
+        serializedVersion: 2
+        x: 4097
+        y: 257
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2c504f30a639490800000000000000
+      internalID: -7740726769308286266
       vertices: []
       indices: 
       edges: []

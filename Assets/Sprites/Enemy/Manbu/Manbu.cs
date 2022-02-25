@@ -44,7 +44,6 @@ public class Manbu : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerProjectile")
         {
-            Debug.Log(collision.gameObject.tag == "PlayerProjectile");
             Destroy(gameObject);
         }
     }

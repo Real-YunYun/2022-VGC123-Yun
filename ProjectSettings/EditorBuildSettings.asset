@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Title Screen.unity
+    guid: 378e1a45c83044f449cbe90b428f97b2
+  - enabled: 1
+    path: Assets/Scenes/Bomb Man Stage.unity
+    guid: 1d21fff0df0d28b48974484f3c3d7550
   m_configObjects: {}

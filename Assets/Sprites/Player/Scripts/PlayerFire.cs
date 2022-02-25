@@ -26,7 +26,7 @@ public class PlayerFire : MonoBehaviour
 
     private void Update()
     {
-         if (Input.GetButtonDown("Fire1"))
+         if (Input.GetButtonDown("Fire1") && Time.timeScale == 1)
         {
             PlayerController curPlayerController = gameObject.GetComponent<PlayerController>();
             if (curPlayerController.ammo != 0 && !(curPlayerController.ammo < 0))

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
 
@@ -12,12 +13,12 @@ public class PlayerController : MonoBehaviour
     bool shootingCoroutineRunning = false;
     bool hurtCoroutineRunning = false;
 
-    public bool verboose = true;
-    public bool stunCharacter = false;
-    public bool isGrounded = false;
-    public bool isShooting = false;
+    bool stunCharacter = false;
+    bool isGrounded = false;
+    bool isShooting = false;
+
     public bool isHurt = false;
-    public bool isClimbing = false;
+    bool isClimbing = false;
     public int health = 28;
     public int ammo = 56;
 
@@ -27,7 +28,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer pr;
 
     int _score = 0;
-    int _lives = 1;
+    int _lives = 3;
     public int maxLives = 3;
 
     public int score
@@ -59,8 +60,6 @@ public class PlayerController : MonoBehaviour
     }
 
     [SerializeField] public float speed;
-
-    [SerializeField] public float groundCheckRadius;
     [SerializeField] public int jumpForce;
 
     [SerializeField] LayerMask isDeathBoxLayer;
@@ -76,9 +75,6 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] Image healthBar;
     [SerializeField] Image ammoBar;
-    [SerializeField] Image liveSymbol1;
-    [SerializeField] Image liveSymbol2;
-    [SerializeField] Image liveSymbol3;
     [SerializeField] Text scoreText;
 
 
@@ -100,75 +96,78 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isShooting = false;
-        handleUI();
-        float hInput = Input.GetAxis("Horizontal");
-        Vector2 moveDir = new Vector2(hInput * speed, rb.velocity.y);
-
-        if (health <= 0)
+        if (Time.timeScale == 1)
         {
-            anim.SetBool("Death", true);
-            lives--;
-            health = 28;
-        }
-        else
-        {
-            anim.SetBool("Death", false);
-        }
-        
-        if (!stunCharacter || !isHurt)
-        {
-            isGrounded = groundCheckCollider.IsTouchingLayers(isGroundLayer);
+            isShooting = false;
+            handleUI();
+            float hInput = Input.GetAxis("Horizontal");
+            Vector2 moveDir = new Vector2(hInput * speed, rb.velocity.y);
 
-            if (groundCheckCollider.IsTouchingLayers(isDeathBoxLayer)) health = 0;
-
-            if (isGrounded && Input.GetButtonDown("Jump"))
+            if (health <= 0)
             {
-                rb.velocity = Vector2.zero;
-                rb.AddForce(Vector2.up * jumpForce);
+                anim.SetBool("Death", true);
+                lives--;
+                health = 28;
             }
-            
-
-            if (!(rb.IsTouchingLayers(isLadderLayer))) anim.enabled = true;
-
-            anim.SetBool("Climbing", ladderCheckCollider.IsTouchingLayers(isLadderLayer));
-            anim.SetBool("Mantle", ladderCheckCollider.IsTouchingLayers(isMantleLayer));
-            if (ladderCheckCollider.IsTouchingLayers(isLadderLayer) && Input.GetKey(KeyCode.W))
+            else
             {
-                anim.enabled = true;
-                moveDir.y = 3;
+                anim.SetBool("Death", false);
             }
-            if (ladderCheckCollider.IsTouchingLayers(isLadderLayer) && !(Input.GetKey(KeyCode.W)))
+
+            if (!stunCharacter || !isHurt)
             {
-                //anim.Play("Climbing");
-                moveDir.y = 0.201f;
-                anim.enabled = false;
-            }
-            
-            rb.velocity = moveDir;
+                isGrounded = groundCheckCollider.IsTouchingLayers(isGroundLayer);
 
-            if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D)) 
-            { 
-                stunCharacter = true; 
-                anim.SetBool("stunCharacter", stunCharacter);
+                if (groundCheckCollider.IsTouchingLayers(isDeathBoxLayer)) health = 0;
+
+                if (isGrounded && Input.GetButtonDown("Jump"))
+                {
+                    rb.velocity = Vector2.zero;
+                    rb.AddForce(Vector2.up * jumpForce);
+                }
+
+
+                if (!(rb.IsTouchingLayers(isLadderLayer))) anim.enabled = true;
+
+                anim.SetBool("Climbing", ladderCheckCollider.IsTouchingLayers(isLadderLayer));
+                anim.SetBool("Mantle", ladderCheckCollider.IsTouchingLayers(isMantleLayer));
+                if (ladderCheckCollider.IsTouchingLayers(isLadderLayer) && Input.GetKey(KeyCode.W))
+                {
+                    anim.enabled = true;
+                    moveDir.y = 3;
+                }
+                if (ladderCheckCollider.IsTouchingLayers(isLadderLayer) && !(Input.GetKey(KeyCode.W)))
+                {
+                    //anim.Play("Climbing");
+                    moveDir.y = 0.201f;
+                    anim.enabled = false;
+                }
+
+                rb.velocity = moveDir;
+
+                if (Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.D))
+                {
+                    stunCharacter = true;
+                    anim.SetBool("stunCharacter", stunCharacter);
+                }
+
+                if (hInput > 0 && !pr.flipX || hInput < 0 && pr.flipX)
+                {
+                    pr.flipX = !pr.flipX;
+                    anim.SetBool("flipX", pr.flipX);
+                }
+
+                if (Mathf.Abs(hInput) <= 0.1f) moveDir.x = 0;
+
+                anim.SetFloat("xVel", Mathf.Abs(hInput));
+                anim.SetFloat("yVel", Mathf.Abs(rb.velocity.y));
+                anim.SetBool("isGrounded", isGrounded);
             }
 
-            if (hInput > 0 && !pr.flipX || hInput < 0 && pr.flipX)
+            if (isHurt)
             {
-                pr.flipX = !pr.flipX;
-                anim.SetBool("flipX", pr.flipX);
+                StartHurtDelay();
             }
-
-            if (Mathf.Abs(hInput) <= 0.1f ) moveDir.x = 0;
-
-            anim.SetFloat("xVel", Mathf.Abs(hInput));
-            anim.SetFloat("yVel", Mathf.Abs(rb.velocity.y));
-            anim.SetBool("isGrounded", isGrounded);
-        }  
-        
-        if (isHurt)
-        {
-            StartHurtDelay();
         }
     }
 
@@ -193,23 +192,10 @@ public class PlayerController : MonoBehaviour
         }
 
         float healthTemp = 1f / 28f;
-        if (Input.GetButtonDown("Fire2"))
+        if (health != 0 && health < 0)
         {
-            if (health != 0 && health > 0) health--;
-            else
-            {
-                health = 0;
-                lives--;
-            }
-        }
-
-        if (lives > 0)
-        {
-            if (lives == 3) liveSymbol3.fillAmount = 1;
-
-            if (lives >= 2) liveSymbol2.fillAmount = 1;
-
-            if (lives >= 1) liveSymbol1.fillAmount = 1;
+            health = 28;
+            lives--;
         }
 
         healthBar.fillAmount = health * healthTemp;
@@ -220,7 +206,7 @@ public class PlayerController : MonoBehaviour
 
     public void StartHurtDelay()
     {
-        if (!shootingCoroutineRunning)
+        if (!hurtCoroutineRunning)
         {
             StartCoroutine("HurtDelay");
         }
@@ -234,11 +220,9 @@ public class PlayerController : MonoBehaviour
     {
         hurtCoroutineRunning = true;
 
-        isHurt = true;
-        anim.SetBool("Hurt", isHurt);
+        anim.SetBool("Hurt", false);
         yield return new WaitForSeconds(1.5f);
-        isHurt = false;
-        anim.SetBool("Hurt", isHurt);
+        anim.SetBool("Hurt", false);
 
         hurtCoroutineRunning = false;
     }
