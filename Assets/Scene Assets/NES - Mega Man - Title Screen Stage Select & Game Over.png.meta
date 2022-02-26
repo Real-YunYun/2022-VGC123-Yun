@@ -10,10 +10,10 @@ TextureImporter:
     second: Mega Man Press Start Button
   - first:
       213: 8494751275902337645
-    second: Mega Man Continue Button
+    second: Mega Man Not Selected Continue Button
   - first:
       213: -6149149633846382730
-    second: Mega Man Select Stage Button
+    second: Mega Man Not Selected Select Stage Button
   - first:
       213: 5872914076432319879
     second: Mega Man Game Over Screen
@@ -68,6 +68,30 @@ TextureImporter:
   - first:
       213: 1413792315282129946
     second: Mega Man - N
+  - first:
+      213: 7396118325080041183
+    second: Mega Man Continue Button Highlighted
+  - first:
+      213: 1894342253762252257
+    second: Mega Man Select Stage Button Highlighted
+  - first:
+      213: 3830598556576235995
+    second: Mega Man Continue Button Highlighted
+  - first:
+      213: 4109976295750956835
+    second: Mega Man Select Stage Button Highlighted
+  - first:
+      213: 3263327408810529049
+    second: Mega Man Quit Game Button
+  - first:
+      213: 4425797613695275895
+    second: Mega Man Quit Game Button Hightlighted
+  - first:
+      213: -1271917282289303852
+    second: Mega Man Quit Game Button Selected
+  - first:
+      213: 8299552296638185753
+    second: Mega Man times
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -202,10 +226,10 @@ TextureImporter:
       name: Mega Man Continue Button
       rect:
         serializedVersion: 2
-        x: 542
-        y: 178
-        width: 63
-        height: 7
+        x: 523
+        y: 174
+        width: 85
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,10 +247,10 @@ TextureImporter:
       name: Mega Man Select Stage Button
       rect:
         serializedVersion: 2
-        x: 542
-        y: 160
-        width: 94
-        height: 7
+        x: 523
+        y: 156
+        width: 116
+        height: 14
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -564,7 +588,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -585,7 +609,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -606,7 +630,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,6 +638,174 @@ TextureImporter:
       bones: []
       spriteID: a148192ce9cce9310800000000000000
       internalID: 1413792315282129946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Continue Button Highlighted
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 122
+        width: 85
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6272b2e6a44a660800000000000000
+      internalID: 7396118325080041183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Select Stage Button Highlighted
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 104
+        width: 116
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ed038e3e3e0a4a10800000000000000
+      internalID: 1894342253762252257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Continue Button Selected
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 70
+        width: 85
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd1c9d18715092530800000000000000
+      internalID: 3830598556576235995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Select Stage Button Selected
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 52
+        width: 116
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327f2875aa1990930800000000000000
+      internalID: 4109976295750956835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Quit Game Button
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 139
+        width: 86
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91192fb0dfaa94d20800000000000000
+      internalID: 3263327408810529049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Quit Game Button Hightlighted
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 87
+        width: 86
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77314141b779b6d30800000000000000
+      internalID: 4425797613695275895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man Quit Game Button Selected
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 34
+        width: 86
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de377d78fd395ee0800000000000000
+      internalID: -1271917282289303852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mega Man times
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 213
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91185e347deed2370800000000000000
+      internalID: 8299552296638185753
       vertices: []
       indices: 
       edges: []

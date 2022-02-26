@@ -11,16 +11,13 @@ public class PlayerController : MonoBehaviour
 
     bool coroutineRunning = false;
     bool shootingCoroutineRunning = false;
-    bool hurtCoroutineRunning = false;
 
     bool stunCharacter = false;
     bool isGrounded = false;
-    bool isShooting = false;
 
-    public bool isHurt = false;
     bool isClimbing = false;
     public int health = 28;
-    public int ammo = 56;
+    public int ammo = 28;
 
     Animator anim;
 
@@ -28,7 +25,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer pr;
 
     int _score = 0;
-    int _lives = 3;
+    public static int _lives = 3;
     public int maxLives = 3;
 
     public int score
@@ -45,17 +42,11 @@ public class PlayerController : MonoBehaviour
         get { return _lives; }
         set
         {
-            //Respawn
-            //if (_lives > value)
-
             _lives = value;
             if (_lives > maxLives)
             {
                 _lives = maxLives;
             }
-
-            // Gameover screen?
-            //if (_lives < 0)
         }
     }
 
@@ -98,27 +89,22 @@ public class PlayerController : MonoBehaviour
     {
         if (Time.timeScale == 1)
         {
-            isShooting = false;
             handleUI();
             float hInput = Input.GetAxis("Horizontal");
             Vector2 moveDir = new Vector2(hInput * speed, rb.velocity.y);
 
-            if (health <= 0)
+            if (groundCheckCollider.IsTouchingLayers(isDeathBoxLayer))
             {
-                anim.SetBool("Death", true);
-                lives--;
-                health = 28;
+                health = 0;
+                anim.Play("Death");
             }
-            else
-            {
-                anim.SetBool("Death", false);
-            }
+            if (health <= 0) anim.Play("Death");
+            else anim.SetBool("Death", false);
 
-            if (!stunCharacter || !isHurt)
+            if (!stunCharacter)
             {
                 isGrounded = groundCheckCollider.IsTouchingLayers(isGroundLayer);
 
-                if (groundCheckCollider.IsTouchingLayers(isDeathBoxLayer)) health = 0;
 
                 if (isGrounded && Input.GetButtonDown("Jump"))
                 {
@@ -163,11 +149,7 @@ public class PlayerController : MonoBehaviour
                 anim.SetFloat("yVel", Mathf.Abs(rb.velocity.y));
                 anim.SetBool("isGrounded", isGrounded);
             }
-
-            if (isHurt)
-            {
-                StartHurtDelay();
-            }
+            unStunPlayer();
         }
     }
 
@@ -183,8 +165,7 @@ public class PlayerController : MonoBehaviour
             }
             if (ammo != 0 && ammo > 0)
             {
-                isShooting = true;
-                anim.SetBool("isShooting", isShooting);
+                anim.SetBool("isShooting", true);
                 ammo--;
                 StartShootingDelay();
             }
@@ -194,9 +175,9 @@ public class PlayerController : MonoBehaviour
         float healthTemp = 1f / 28f;
         if (health != 0 && health < 0)
         {
-            health = 28;
             lives--;
         }
+        else if (health > 28) health = 28;
 
         healthBar.fillAmount = health * healthTemp;
         ammoBar.fillAmount = ammo * ammoTemp;
@@ -204,27 +185,10 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void StartHurtDelay()
-    {
-        if (!hurtCoroutineRunning)
-        {
-            StartCoroutine("HurtDelay");
-        }
-        else
-        {
-            StopCoroutine("HurtDelay");
-        }
-    }
-
-    IEnumerator HurtDelay()
-    {
-        hurtCoroutineRunning = true;
-
-        anim.SetBool("Hurt", false);
-        yield return new WaitForSeconds(1.5f);
-        anim.SetBool("Hurt", false);
-
-        hurtCoroutineRunning = false;
+    public void StartHurtDelay() 
+    { 
+        anim.Play("Hurt");
+        stunCharacter = true;
     }
 
     public void unStunPlayer()
@@ -250,11 +214,9 @@ public class PlayerController : MonoBehaviour
     {
         shootingCoroutineRunning = true;
 
-        isShooting = true;
-        anim.SetBool("isShooting", isShooting);
+        anim.SetBool("isShooting", true);
         yield return new WaitForSeconds(2.0f);
-        isShooting = false;
-        anim.SetBool("isShooting", isShooting);
+        anim.SetBool("isShooting", false);
 
         shootingCoroutineRunning = false;
     }
@@ -282,6 +244,12 @@ public class PlayerController : MonoBehaviour
 
         jumpForce /= 2;
         coroutineRunning = false;
+    }
+
+    public void Death()
+    {
+        SceneManager.LoadScene(2);
+        lives--;
     }
 }
 

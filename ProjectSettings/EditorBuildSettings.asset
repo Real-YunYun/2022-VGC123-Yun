@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Bomb Man Stage.unity
     guid: 1d21fff0df0d28b48974484f3c3d7550
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 0322ccc0eefdfa84683afa42b58bd0f7
   m_configObjects: {}

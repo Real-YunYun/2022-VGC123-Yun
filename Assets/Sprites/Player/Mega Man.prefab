@@ -100,7 +100,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f16cb4624ee59e74d84e6128829ce580, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -452,11 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8f8bdb108d22a498da9a556387edbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stunCharacter: 0
-  isGrounded: 0
-  isShooting: 0
   isHurt: 0
-  isClimbing: 0
   health: 28
   ammo: 28
   maxLives: 3

@@ -49,8 +49,8 @@ public class PepeController : MonoBehaviour
         PlayerController curPlayerController = collision.gameObject.GetComponent<PlayerController>();
         if (collision.gameObject.tag == "Player" && !(curPlayerController == null))
         {
-            curPlayerController.health-=7;
-            curPlayerController.isHurt = true;
+            curPlayerController.health -= 7;
+            curPlayerController.StartHurtDelay();
         }
         if (collision.gameObject.tag == "PlayerProjectile")
         {

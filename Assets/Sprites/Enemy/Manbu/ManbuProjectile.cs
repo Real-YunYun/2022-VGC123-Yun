@@ -27,8 +27,9 @@ public class ManbuProjectile : MonoBehaviour
         if (collision.gameObject.tag == "Player" && !(curPlayerController == null))
         {
             curPlayerController.health -= 7;
-            curPlayerController.isHurt = true;
+            curPlayerController.StartHurtDelay();
             Destroy(this.gameObject);
         }
+        if (collision.gameObject.tag == "Ground") Destroy(this.gameObject);
     }
 }

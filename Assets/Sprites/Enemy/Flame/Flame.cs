@@ -19,7 +19,7 @@ public class Flame : MonoBehaviour
             if (!(curPlayerController == null))
             {
                 curPlayerController.health -= 7;
-                curPlayerController.isHurt = true;
+                curPlayerController.StartHurtDelay();
             }
         }
     }
