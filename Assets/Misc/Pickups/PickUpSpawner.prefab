@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b46bd116ecb88b744898102af0b560e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnOnUpdate: 1
   pickupsPreFabArray:
   - {fileID: 9172233635146600594, guid: c6814f01b3e4fe44384ec38c151e6849, type: 3}
   - {fileID: 8945684705104749537, guid: ba3928a1d4a0ccb43b84d81ee20e5292, type: 3}
@@ -51,3 +52,6 @@ MonoBehaviour:
   - {fileID: 8165350100677043250, guid: 271e5b361b420f54684abe9dc7a93381, type: 3}
   - {fileID: 1185287118877549653, guid: c2f27d7ceb2d3794f9bee0ed2243d459, type: 3}
   - {fileID: 8962437494852718986, guid: 8e5f8775901307649943d1b322a9a368, type: 3}
+  - {fileID: 8676918251771478042, guid: e32e716de79c4a44592caf5bc8aefb3f, type: 3}
+  - {fileID: 307929563977251783, guid: ba23e981116b49a4888fd4a2476faf57, type: 3}
+  - {fileID: 5434694684707523664, guid: 17513f1ee3238874a978e09056acaeab, type: 3}

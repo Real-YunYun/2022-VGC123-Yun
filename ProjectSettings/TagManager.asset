@@ -13,6 +13,7 @@ TagManager:
   - Ladder
   - Mantle
   - PlayerProjectile
+  - Camera Waypoint
   layers:
   - Default
   - TransparentFX

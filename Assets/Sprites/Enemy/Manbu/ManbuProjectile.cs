@@ -26,7 +26,7 @@ public class ManbuProjectile : MonoBehaviour
         PlayerController curPlayerController = collision.gameObject.GetComponent<PlayerController>();
         if (collision.gameObject.tag == "Player" && !(curPlayerController == null))
         {
-            curPlayerController.health -= 7;
+            curPlayerController.health -= 4;
             curPlayerController.StartHurtDelay();
             Destroy(this.gameObject);
         }

@@ -66,7 +66,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2002138720946586781}
-  - component: {fileID: 5355235290128970091}
+  - component: {fileID: 5037670769669962232}
   m_Layer: 10
   m_Name: Audio Source
   m_TagString: Untagged
@@ -88,7 +88,7 @@ Transform:
   m_Father: {fileID: 9138883467376691236}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &5355235290128970091
+--- !u!82 &5037670769669962232
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -100,9 +100,9 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f16cb4624ee59e74d84e6128829ce580, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8f8bdb108d22a498da9a556387edbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHurt: 0
+  stunCharacter: 0
   health: 28
   ammo: 28
   maxLives: 3

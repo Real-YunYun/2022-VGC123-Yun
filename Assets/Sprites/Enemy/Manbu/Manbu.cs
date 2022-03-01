@@ -7,11 +7,13 @@ public class Manbu : MonoBehaviour
     [SerializeField] PlayerController curPlayerController;
     [SerializeField] FireArea FireZone;
     [SerializeField] Transform projectileSpawnPoint;
+    [SerializeField] SpawnPickUps spawnerPickUp;
     [SerializeField] ManbuProjectile projectile;
 
     SpriteRenderer sr;
     Animator anim;
-
+    
+    public int health = 8;
     public bool attack = false;
     public Vector2 pos;
 
@@ -29,6 +31,11 @@ public class Manbu : MonoBehaviour
             anim.SetBool("Attack", true);
         }
         else anim.SetBool("Attack", false);
+        if (health <= 0)
+        {
+            spawnerPickUp.spawnPickUpOnUpdate();
+            Destroy(this.gameObject);
+        }
     }
 
     public void ManbuAttack()
@@ -44,7 +51,8 @@ public class Manbu : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerProjectile")
         {
-            Destroy(gameObject);
+            health--;
+            Destroy(collision.gameObject);
         }
     }
 }

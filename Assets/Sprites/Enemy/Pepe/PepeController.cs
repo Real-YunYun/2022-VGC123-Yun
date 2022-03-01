@@ -6,10 +6,13 @@ using UnityEngine;
 
 public class PepeController : MonoBehaviour
 {
+    public int health = 5;
+
     Rigidbody2D rb;
     Collider2D c2;
     SpriteRenderer sr;
 
+    [SerializeField] SpawnPickUps spawnerPickUp;
     [SerializeField] LayerMask isStopWallLayer;
     [SerializeField] LayerMask isPlayerLayer;
 
@@ -43,6 +46,11 @@ public class PepeController : MonoBehaviour
         {
             inLayerMask = false;
         }
+        if (health <= 0)
+        {
+            spawnerPickUp.spawnPickUpOnUpdate();
+            Destroy(this.gameObject);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -52,9 +60,11 @@ public class PepeController : MonoBehaviour
             curPlayerController.health -= 7;
             curPlayerController.StartHurtDelay();
         }
+        Projectile curProjectile = collision.GetComponent<Projectile>();
         if (collision.gameObject.tag == "PlayerProjectile")
         {
-            Destroy(this.gameObject);
+            health--;
+            Destroy(collision.gameObject);
         }
     }
 }

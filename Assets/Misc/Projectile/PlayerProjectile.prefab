@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  lifetime: 2.5
+  lifetime: 2
 --- !u!212 &1969101576839986592
 SpriteRenderer:
   m_ObjectHideFlags: 0

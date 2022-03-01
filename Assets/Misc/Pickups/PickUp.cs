@@ -16,7 +16,9 @@ public class PickUp : MonoBehaviour
     [SerializeField] int Value;
     public int ScoreValue;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         PlayerController curPlayerController = collision.gameObject.GetComponent<PlayerController>();
         if (collision.gameObject.tag == "Player" && !(curPlayerController == null))

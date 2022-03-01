@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public float lifetime;
 
     Rigidbody2D rb;
+    Collider2D c2;
 
     // Start is called before the first frame update
     void Start()
@@ -20,5 +21,13 @@ public class Projectile : MonoBehaviour
         rb.velocity = new Vector2(speed, 0);
         Destroy(gameObject, lifetime);
     }
-   
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
 }

@@ -29,10 +29,7 @@ public class PlayerFire : MonoBehaviour
          if (Input.GetButtonDown("Fire1") && Time.timeScale == 1)
         {
             PlayerController curPlayerController = gameObject.GetComponent<PlayerController>();
-            if (curPlayerController.ammo != 0 && !(curPlayerController.ammo < 0))
-            {
-                FireProjectile();
-            }
+            if (curPlayerController.ammo != 0 && !(curPlayerController.ammo < 0) && !curPlayerController.stunCharacter) FireProjectile();
         }
       
     }

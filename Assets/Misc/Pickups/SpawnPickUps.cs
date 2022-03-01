@@ -4,19 +4,35 @@ using UnityEngine;
 
 public class SpawnPickUps : MonoBehaviour
 {
-
+    public bool spawnOnUpdate = true;
     public PickUp[] pickupsPreFabArray;
 
     // Start is called before the first frame update
     void Start()
     {
-        int randValue = Random.Range(0,7);
-        Instantiate(pickupsPreFabArray[randValue], transform.position, transform.rotation);
+        int randValue = Random.Range(0,3);
+        if (randValue != 3 && !spawnOnUpdate)
+        {
+            Instantiate(pickupsPreFabArray[randValue + 7], transform.position, transform.rotation);
+        }
+        else if (randValue == 3)
+        {
+            randValue = Random.Range(0,7);
+            Instantiate(pickupsPreFabArray[randValue], transform.position, transform.rotation);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void spawnPickUpOnUpdate()
     {
-        
+        int randValue = Random.Range(0, 3);
+        if (randValue != 3)
+        {
+            Instantiate(pickupsPreFabArray[randValue + 7], transform.position, transform.rotation);
+        }
+        else if (randValue == 3)
+        {
+            randValue = Random.Range(0, 7);
+            Instantiate(pickupsPreFabArray[randValue], transform.position, transform.rotation);
+        }
     }
 }

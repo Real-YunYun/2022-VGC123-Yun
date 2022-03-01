@@ -12,19 +12,18 @@ public class PlayerController : MonoBehaviour
     bool coroutineRunning = false;
     bool shootingCoroutineRunning = false;
 
-    bool stunCharacter = false;
+    public bool stunCharacter = false;
     bool isGrounded = false;
 
-    bool isClimbing = false;
     public int health = 28;
     public int ammo = 28;
 
     Animator anim;
-
     Rigidbody2D rb;
     SpriteRenderer pr;
 
     int _score = 0;
+    public static int stageLevel = 0;
     public static int _lives = 3;
     public int maxLives = 3;
 
@@ -51,7 +50,7 @@ public class PlayerController : MonoBehaviour
     }
 
     [SerializeField] public float speed;
-    [SerializeField] public int jumpForce;
+    [SerializeField] public float jumpForce;
 
     [SerializeField] LayerMask isDeathBoxLayer;
     [SerializeField] LayerMask isGroundLayer;
@@ -75,8 +74,8 @@ public class PlayerController : MonoBehaviour
         pr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         
-        if (speed <= 0) { speed = 5.0f; }
-        if (jumpForce <= 0) { jumpForce = 375; }
+        if (speed <= 0) { speed = 4.0f; }
+        if (jumpForce <= 0) { jumpForce = 300; }
         if (stunCharacter) { stunCharacter = false; }
         if (!groundCheck)
         {
@@ -105,7 +104,6 @@ public class PlayerController : MonoBehaviour
             {
                 isGrounded = groundCheckCollider.IsTouchingLayers(isGroundLayer);
 
-
                 if (isGrounded && Input.GetButtonDown("Jump"))
                 {
                     rb.velocity = Vector2.zero;
@@ -121,11 +119,13 @@ public class PlayerController : MonoBehaviour
                 {
                     anim.enabled = true;
                     moveDir.y = 3;
+                    rb.gravityScale = 1;
                 }
                 if (ladderCheckCollider.IsTouchingLayers(isLadderLayer) && !(Input.GetKey(KeyCode.W)))
                 {
                     //anim.Play("Climbing");
-                    moveDir.y = 0.201f;
+                    moveDir = Vector2.zero;
+                    rb.gravityScale = 0;
                     anim.enabled = false;
                 }
 
@@ -149,7 +149,6 @@ public class PlayerController : MonoBehaviour
                 anim.SetFloat("yVel", Mathf.Abs(rb.velocity.y));
                 anim.SetBool("isGrounded", isGrounded);
             }
-            unStunPlayer();
         }
     }
 
@@ -165,7 +164,6 @@ public class PlayerController : MonoBehaviour
             }
             if (ammo != 0 && ammo > 0)
             {
-                anim.SetBool("isShooting", true);
                 ammo--;
                 StartShootingDelay();
             }
@@ -188,7 +186,6 @@ public class PlayerController : MonoBehaviour
     public void StartHurtDelay() 
     { 
         anim.Play("Hurt");
-        stunCharacter = true;
     }
 
     public void unStunPlayer()
@@ -202,6 +199,13 @@ public class PlayerController : MonoBehaviour
     {
         if (!shootingCoroutineRunning)
         {
+            shootingCoroutineRunning = true;
+            StartCoroutine("ShootingDelay");
+        }
+        else if (shootingCoroutineRunning)
+        {
+            StopCoroutine("ShootingDelay");
+            anim.SetBool("isShooting", false);
             StartCoroutine("ShootingDelay");
         }
         else
@@ -212,13 +216,12 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator ShootingDelay()
     {
-        shootingCoroutineRunning = true;
-
         anim.SetBool("isShooting", true);
-        yield return new WaitForSeconds(2.0f);
-        anim.SetBool("isShooting", false);
+
+        yield return new WaitForSeconds(1);
 
         shootingCoroutineRunning = false;
+        anim.SetBool("isShooting", false);
     }
 
     public void StartJumpForceChange()
@@ -238,18 +241,18 @@ public class PlayerController : MonoBehaviour
     IEnumerator JumpForceChange()
     {
         coroutineRunning = true;
-        jumpForce *= 2;
+        jumpForce *= 1.25f;
 
         yield return new WaitForSeconds(5.0f);
 
-        jumpForce /= 2;
+        jumpForce /= 1.25f;
         coroutineRunning = false;
     }
 
     public void Death()
     {
-        SceneManager.LoadScene(2);
         lives--;
+        SceneManager.LoadScene(2);
     }
 }
 
