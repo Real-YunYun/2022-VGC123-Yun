@@ -16,8 +16,8 @@ public class ManbuProjectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         if (lifetime <= 0) lifetime = 1.0f;
         PlayerPos.y += 0.5f;
-        Vector3 tempVector = PlayerPos - gameObject.transform.position;
-        rb.velocity = speed * tempVector.normalized;
+        Vector3 tempVector = speed * (PlayerPos - gameObject.transform.position).normalized;
+        rb.velocity = tempVector;
         Destroy(gameObject, lifetime);
     }
 

@@ -10,7 +10,7 @@ public class LevelSelectionScreen : MonoBehaviour
 
 	void Start()
 	{
-		PlayerController._lives = 3;
+		GameManager.state.lives = 3;
 		Button btnGUTSMAN = buttonGUTSMAN.GetComponent<Button>();
 		Button btnBOMBMAN = buttonBOMBMAN.GetComponent<Button>();
 		btnGUTSMAN.onClick.AddListener(LoadLevelGUTSMAN);
@@ -19,7 +19,8 @@ public class LevelSelectionScreen : MonoBehaviour
 
 	void LoadLevelGUTSMAN()
 	{
-		SceneManager.LoadScene(2);
+		GameManager.state.PlayingLevel = 2;
+		SceneManager.LoadScene(GameManager.state.PlayingLevel);
 	}
 	
 	void LoadLevelBOMBMAN()

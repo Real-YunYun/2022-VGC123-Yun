@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Manbu : MonoBehaviour
 {
-    [SerializeField] PlayerController curPlayerController;
     [SerializeField] FireArea FireZone;
     [SerializeField] Transform projectileSpawnPoint;
     [SerializeField] SpawnPickUps spawnerPickUp;
@@ -40,10 +39,9 @@ public class Manbu : MonoBehaviour
 
     public void ManbuAttack()
     {
-        if (gameObject.transform.position.x > curPlayerController.transform.position.x) sr.flipX = false;
-        if (gameObject.transform.position.x < curPlayerController.transform.position.x) sr.flipX = true;
+        sr.flipX = this.gameObject.transform.position.x > GameManager.state.MegaMan.transform.position.x;
         ManbuProjectile temp = Instantiate(projectile, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
-        temp.PlayerPos = curPlayerController.transform.position;
+        temp.PlayerPos = GameManager.state.MegaMan.transform.position;
         attack = false;
     }
 

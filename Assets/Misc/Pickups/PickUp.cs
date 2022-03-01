@@ -20,23 +20,22 @@ public class PickUp : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        PlayerController curPlayerController = collision.gameObject.GetComponent<PlayerController>();
-        if (collision.gameObject.tag == "Player" && !(curPlayerController == null))
+        if (collision.gameObject.tag == "Player" && !(collision.gameObject.GetComponent<PlayerController>() == null))
         {
 
             switch (curCollectable)
             {
                 case CollectableType.POWERUP:
-                    curPlayerController.StartJumpForceChange();
+                    collision.gameObject.GetComponent<PlayerController>().StartJumpForceChange();
                     break;
                 case CollectableType.HEALTH:
-                    curPlayerController.health += Value;
+                    collision.gameObject.GetComponent<PlayerController>().health += Value;
                     break;
                 case CollectableType.AMMO:
-                    curPlayerController.ammo += Value;
+                    collision.gameObject.GetComponent<PlayerController>().ammo += Value;
                     break;
                 case CollectableType.SCORE:
-                    curPlayerController.score += ScoreValue;
+                    GameManager.state.score += ScoreValue;
                     break;
             }
             Destroy(this.gameObject);

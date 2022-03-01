@@ -22,33 +22,6 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     SpriteRenderer pr;
 
-    int _score = 0;
-    public static int stageLevel = 0;
-    public static int _lives = 3;
-    public int maxLives = 3;
-
-    public int score
-    {
-        get { return _score; }
-        set
-        {
-            _score = value;
-        }
-    }
-
-    public int lives
-    {
-        get { return _lives; }
-        set
-        {
-            _lives = value;
-            if (_lives > maxLives)
-            {
-                _lives = maxLives;
-            }
-        }
-    }
-
     [SerializeField] public float speed;
     [SerializeField] public float jumpForce;
 
@@ -173,13 +146,13 @@ public class PlayerController : MonoBehaviour
         float healthTemp = 1f / 28f;
         if (health != 0 && health < 0)
         {
-            lives--;
+            GameManager.state.lives--;
         }
         else if (health > 28) health = 28;
 
         healthBar.fillAmount = health * healthTemp;
         ammoBar.fillAmount = ammo * ammoTemp;
-        scoreText.text = score.ToString();
+        scoreText.text = GameManager.state.score.ToString();
 
     }
 
@@ -251,8 +224,8 @@ public class PlayerController : MonoBehaviour
 
     public void Death()
     {
-        lives--;
-        SceneManager.LoadScene(2);
+        GameManager.state.lives--;
+        SceneManager.LoadScene("Game Over");
     }
 }
 

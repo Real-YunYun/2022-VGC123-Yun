@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class LivesRemaining : MonoBehaviour
 {
-    private int callToPlayerController;
     [SerializeField] Sprite Lives0;
     [SerializeField] Sprite Lives1;
     [SerializeField] Sprite Lives2;
@@ -20,10 +19,9 @@ public class LivesRemaining : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        callToPlayerController = PlayerController._lives;
-        if (callToPlayerController == 3) img.sprite = Lives3;
-        else if (callToPlayerController == 2) img.sprite = Lives2;
-        else if (callToPlayerController == 1) img.sprite = Lives1;
+        if (GameManager.state.lives == 3) img.sprite = Lives3;
+        else if (GameManager.state.lives == 2) img.sprite = Lives2;
+        else if (GameManager.state.lives == 1) img.sprite = Lives1;
         else img.sprite = Lives0;
     }
 }

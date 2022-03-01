@@ -9,7 +9,7 @@ public class MainMenu : MonoBehaviour
 
 	void Start()
 	{
-		PlayerController._lives = 3;
+		GameManager.state.lives = 3;
 		Button btn = yourButton.GetComponent<Button>();
 		btn.onClick.AddListener(LoadLevel);
 	}
