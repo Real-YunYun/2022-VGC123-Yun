@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Animator))]
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     Rigidbody2D rb;
     SpriteRenderer pr;
+    PlayerSounds sounds;
 
     [SerializeField] public float speed;
     [SerializeField] public float jumpForce;
@@ -40,12 +42,16 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Image ammoBar;
     [SerializeField] Text scoreText;
 
+    [SerializeField] AudioMixerGroup group;
+    [SerializeField] AudioClip PlayerDeathSound;
+    [SerializeField] AudioClip PlayerHitSound;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         pr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        sounds = GetComponent<PlayerSounds>();
         
         if (speed <= 0) { speed = 4.0f; }
         if (jumpForce <= 0) { jumpForce = 300; }
@@ -68,6 +74,7 @@ public class PlayerController : MonoBehaviour
             if (groundCheckCollider.IsTouchingLayers(isDeathBoxLayer))
             {
                 health = 0;
+                sounds.Play(PlayerDeathSound);
                 anim.Play("Death");
             }
             if (health <= 0) anim.Play("Death");
@@ -82,7 +89,6 @@ public class PlayerController : MonoBehaviour
                     rb.velocity = Vector2.zero;
                     rb.AddForce(Vector2.up * jumpForce);
                 }
-
 
                 if (!(rb.IsTouchingLayers(isLadderLayer))) anim.enabled = true;
 
@@ -127,7 +133,6 @@ public class PlayerController : MonoBehaviour
 
     private void handleUI()
     {
-
         float ammoTemp = 1f / 56f;
         if (Input.GetButtonDown("Fire1"))
         {
@@ -153,11 +158,11 @@ public class PlayerController : MonoBehaviour
         healthBar.fillAmount = health * healthTemp;
         ammoBar.fillAmount = ammo * ammoTemp;
         scoreText.text = GameManager.state.score.ToString();
-
     }
 
     public void StartHurtDelay() 
-    { 
+    {
+        sounds.Play(PlayerHitSound);
         anim.Play("Hurt");
     }
 

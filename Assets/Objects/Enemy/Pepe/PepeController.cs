@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(SpriteRenderer), typeof(Collider2D))]
 
@@ -11,10 +12,13 @@ public class PepeController : MonoBehaviour
     Rigidbody2D rb;
     Collider2D c2;
     SpriteRenderer sr;
+    PlayerSounds ps;
 
     [SerializeField] SpawnPickUps spawnerPickUp;
     [SerializeField] LayerMask isStopWallLayer;
     [SerializeField] LayerMask isPlayerLayer;
+    [SerializeField] AudioClip OnHitSound;
+    [SerializeField] AudioClip OnDeathSound;
 
     public Vector2 speed;
     public bool flipped = false;
@@ -25,6 +29,7 @@ public class PepeController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         c2 = GetComponent<Collider2D>();
         sr = GetComponent<SpriteRenderer>();
+        ps = GetComponent<PlayerSounds>();
         speed.x = 2f;
         speed.y = 0f;
     }
@@ -48,6 +53,7 @@ public class PepeController : MonoBehaviour
         }
         if (health <= 0)
         {
+            ps.Play(OnDeathSound);
             spawnerPickUp.spawnPickUpOnUpdate();
             Destroy(this.gameObject);
         }
@@ -63,6 +69,7 @@ public class PepeController : MonoBehaviour
         Projectile curProjectile = collision.GetComponent<Projectile>();
         if (collision.gameObject.tag == "PlayerProjectile")
         {
+            ps.Play(OnHitSound);
             health--;
             Destroy(collision.gameObject);
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Manbu : MonoBehaviour
 {
@@ -8,9 +9,13 @@ public class Manbu : MonoBehaviour
     [SerializeField] Transform projectileSpawnPoint;
     [SerializeField] SpawnPickUps spawnerPickUp;
     [SerializeField] ManbuProjectile projectile;
+    [SerializeField] AudioClip OnHitSound;
+    [SerializeField] AudioClip OnShootSound;
+    [SerializeField] AudioClip OnDeathSound;
 
     SpriteRenderer sr;
     Animator anim;
+    PlayerSounds ps;
     
     public int health = 8;
     public bool attack = false;
@@ -20,7 +25,8 @@ public class Manbu : MonoBehaviour
     void Start()
     {
         sr = GetComponent<SpriteRenderer>(); 
-        anim = GetComponent<Animator>(); 
+        anim = GetComponent<Animator>();
+        ps = GetComponent<PlayerSounds>();
     }
 
     void Update()
@@ -32,6 +38,7 @@ public class Manbu : MonoBehaviour
         else anim.SetBool("Attack", false);
         if (health <= 0)
         {
+            ps.Play(OnDeathSound);
             spawnerPickUp.spawnPickUpOnUpdate();
             Destroy(this.gameObject);
         }
@@ -41,6 +48,7 @@ public class Manbu : MonoBehaviour
     {
         sr.flipX = this.gameObject.transform.position.x > GameManager.state.MegaMan.transform.position.x;
         ManbuProjectile temp = Instantiate(projectile, projectileSpawnPoint.position, projectileSpawnPoint.rotation);
+        ps.Play(OnShootSound);
         temp.PlayerPos = GameManager.state.MegaMan.transform.position;
         attack = false;
     }
@@ -49,6 +57,7 @@ public class Manbu : MonoBehaviour
     {
         if (collision.gameObject.tag == "PlayerProjectile")
         {
+            ps.Play(OnHitSound);
             health--;
             Destroy(collision.gameObject);
         }
