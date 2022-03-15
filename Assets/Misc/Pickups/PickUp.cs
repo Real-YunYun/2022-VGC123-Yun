@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PickUp : MonoBehaviour
 {
@@ -12,11 +13,18 @@ public class PickUp : MonoBehaviour
         AMMO
     }
 
+    PlayerSounds ps;
+    [SerializeField] AudioClip Up1;
+    [SerializeField] AudioClip PointTally;
+    
     [SerializeField] CollectableType curCollectable;
     [SerializeField] int Value;
     public int ScoreValue;
 
-
+    private void Start()
+    {
+        ps = GetComponent<PlayerSounds>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
