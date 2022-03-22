@@ -35,15 +35,19 @@ public class PickUp : MonoBehaviour
             {
                 case CollectableType.POWERUP:
                     collision.gameObject.GetComponent<PlayerController>().StartJumpForceChange();
+                    collision.gameObject.GetComponent<PlayerController>().PlayPickUpSound(PointTally);
                     break;
                 case CollectableType.HEALTH:
                     collision.gameObject.GetComponent<PlayerController>().health += Value;
+                    collision.gameObject.GetComponent<PlayerController>().PlayPickUpSound(PointTally);
                     break;
                 case CollectableType.AMMO:
                     collision.gameObject.GetComponent<PlayerController>().ammo += Value;
+                    collision.gameObject.GetComponent<PlayerController>().PlayPickUpSound(PointTally);
                     break;
                 case CollectableType.SCORE:
                     GameManager.state.score += ScoreValue;
+                    collision.gameObject.GetComponent<PlayerController>().PlayPickUpSound(PointTally);
                     break;
             }
             Destroy(this.gameObject);

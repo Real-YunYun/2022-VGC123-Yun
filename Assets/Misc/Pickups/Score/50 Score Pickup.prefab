@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb173fb5c0048544da244df8d9dbb27b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Up1: {fileID: 0}
+  PointTally: {fileID: 8300000, guid: 5406df50a1259b146b33be5a31416c29, type: 3}
   curCollectable: 1
   Value: 0
   ScoreValue: 50

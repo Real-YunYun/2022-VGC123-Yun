@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
     private void handleUI()
     {
         float ammoTemp = 1f / 56f;
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Mouse ScrollWheel"))
         {
             if (ammo > 56)
             {
@@ -164,6 +164,11 @@ public class PlayerController : MonoBehaviour
     {
         sounds.Play(PlayerHitSound);
         anim.Play("Hurt");
+    }
+
+    public void PlayPickUpSound(AudioClip sound)
+    {
+        sounds.Play(sound);
     }
 
     public void unStunPlayer()

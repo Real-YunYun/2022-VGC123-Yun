@@ -366,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPointLeft: {fileID: 9138883465800500659}
   spawnPointRight: {fileID: 9138883466616424093}
-  projectileSpeed: 7
+  projectileSpeed: 15
   projectilePreFab: {fileID: 7491900494466720590, guid: 5456f97938400ed43b76bfea17bfb2ea, type: 3}
   PlayerFireSound: {fileID: 8300000, guid: e127b33d2989a4f4788344ecfb96f0e3, type: 3}
 --- !u!95 &9138883467376691256
