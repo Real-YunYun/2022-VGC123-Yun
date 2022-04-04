@@ -134,7 +134,7 @@ public class PlayerController : MonoBehaviour
     private void handleUI()
     {
         float ammoTemp = 1f / 56f;
-        if (Input.GetButtonDown("Mouse ScrollWheel"))
+        if (Input.GetButtonDown("Fire1"))
         {
             if (ammo > 56)
             {
